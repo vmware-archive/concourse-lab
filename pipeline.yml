@@ -1,0 +1,17 @@
+groups:
+  - name: main
+    jobs:
+    - my-first-job
+
+jobs:
+  - name: my-first-job
+    plan:
+      - task: hello-world
+        config:
+          platform: linux
+          run:
+            path: /bin/bash
+            args:
+              - -exc
+              - |
+                echo "hello world"
