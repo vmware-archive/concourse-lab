@@ -1,0 +1,17 @@
+FROM ubuntu
+
+RUN apt-get -y update
+RUN apt-get install -y wget build-essential zlibc zlib1g-dev ruby ruby-dev openssl libxslt-dev libxml2-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 unzip
+
+RUN wget https://github.com/cloudfoundry/bosh-cli/releases/download/v5.4.0/bosh-cli-5.4.0-linux-amd64
+RUN mv bosh-cli-5.4.0-linux-amd64 /usr/local/bin/bosh
+RUN chmod +x /usr/local/bin/bosh
+
+RUN wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip
+RUN unzip terraform_0.11.11_linux_amd64.zip
+RUN chmod +x terraform
+RUN mv terraform /usr/local/bin
+
+RUN wget https://github.com/cloudfoundry/bosh-bootloader/releases/download/v7.0.13/bbl-v7.0.13_linux_x86-64
+RUN mv bbl-v7.0.13_linux_x86-64  /usr/local/bin/bbl
+RUN chmod +x /usr/local/bin/bbl
