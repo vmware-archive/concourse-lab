@@ -1,4 +1,18 @@
 
+# Inastallation:
+```
+git clone https://github.com/concourse/concourse-docker
+./generate-keys.sh
+docker-compose up
+
+```
+
+# WebLogin:
+```
+http://127.0.0.1:8080/
+user: test
+password: test
+```
 
 # Common commands:
 

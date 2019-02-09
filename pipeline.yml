@@ -18,7 +18,7 @@ resources:
   - name: bbl-image
     type: docker-image
     source:
-      repository: cfplatformeng/concourse-lab-bbl-image
+      repository: ((docker_repo))
       username: ((docker_hub.username))
       password: ((docker_hub.password))
 
