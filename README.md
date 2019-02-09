@@ -52,3 +52,9 @@ List all containers registered in concourse:
 ```bash
 fly -t local cs
 ```
+
+Unpausing pipeline
+``` bash
+ fly -t main unpause-pipeline -p  my-pipeline
+ ```
+ 

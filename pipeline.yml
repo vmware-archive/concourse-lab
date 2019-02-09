@@ -3,7 +3,7 @@ groups:
     jobs:
     - my-first-job
 
-  - name: support
+  - name: bbl-env
     jobs:
       - build-bbl-image
 
@@ -21,6 +21,7 @@ resources:
       repository: ((docker_repo))
       username: ((docker_hub.username))
       password: ((docker_hub.password))
+      tag: ((bbl_version))
 
 
 jobs:
